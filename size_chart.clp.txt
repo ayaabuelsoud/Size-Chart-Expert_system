@@ -1,0 +1,116 @@
+         CLIPS (6.31 6/12/19)
+CLIPS>  ;Rule for Large size
+(defrule L
+
+(waist 137)
+
+(FH 90 )
+
+(BH 80)
+
+(SL 25 )
+
+=>
+
+(printout t crlf "your tag size is L and USA size is 10" crlf)
+)
+ 
+
+  ;Rule for XLarge size
+(defrule XL
+
+(waist 143)
+
+(FH 91)
+
+(BH 81)
+
+(SL 25)
+
+=>
+
+(printout t crlf "your tag size is XL and USA size is 12" crlf)
+)
+
+
+  ;Rule for 2XLarge size
+(defrule 2XL
+
+(waist 145)
+
+(FH 92)
+
+(BH 82)
+
+(SL 26)
+
+=>
+
+(printout t crlf "your tag size is 2XL and USA size is 14" crlf)
+)
+
+
+  ;Rule for 3XLarge size
+(defrule 3XL
+
+(waist 149)
+
+(FH 93 )
+
+(BH 83)
+
+(SL 26 )
+
+=>
+
+(printout t crlf "your tag size is 3XL and USA size is 16" crlf)
+)
+
+
+  ;Rule for 4XLarge size
+(defrule 4XL
+
+(waist 153)
+
+(FH 94)
+
+(BH 84)
+
+(SL 27)
+
+=>
+
+(printout t crlf "your tag size is 4XL and USA size is 18" crlf)
+)
+ 
+
+  ;Rule for 5XLarge size
+(defrule 5XL
+
+(waist 157)
+
+(FH 95 )
+
+(BH 85)
+
+(SL 27 )
+=>
+
+(printout t crlf "your tag size is 5XL and USA size is 20" crlf)
+)
+
+  ;Rule for receive the input from the user and tell him the size
+(defrule input
+(initial-fact)
+=>
+(printout t crlf "Please choose the value that suits you best" crlf)
+(printout t crlf "what is your waist in cm? (137, 143, 145, 149, 153, 157) ")
+(assert (waist = (read)))
+(printout t crlf "what is your Front height in cm? (90, 91, 92, 93, 94, 95) ")
+(assert (FH = (read)))
+(printout t crlf "what is your Back height in cm? (80, 81, 82, 83, 84, 85) ")
+(assert (BH = (read)))
+(printout t crlf "what is your Strap length in cm? (25, 26 , 27) ")
+(assert (SL = (read)))
+(printout t crlf "------- Recommendations: ---------" crlf)
+)
